@@ -28,7 +28,15 @@ export const useChatbot = () => {
 
   const handleSubmit = async (input: string) => {
     if (!input.trim()) return;
-
+    const Deepseek = process.env.NEXT_PUBLIC_DEEPSEEK_API_KEY;
+    console.log(process.env);
+    console.log('DEEPSEEK_API_KEY:', Deepseek);
+  
+    if (!Deepseek) {
+      console.error("API Key is missing or incorrect");
+      setLoading(false);
+      return;
+    }
     setLoading(true);
     const userMessage = { role: "user", content: input };
     setMessages((prev) => [...prev, userMessage]);
@@ -57,7 +65,7 @@ export const useChatbot = () => {
         },
         {
           headers: {
-            Authorization: "Bearer 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",
+            Authorization: `Bearer ${Deepseek}`,
             "Content-Type": "application/json",
           },
         }
