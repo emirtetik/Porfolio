@@ -1,0 +1,14 @@
+{
+    "Home": "Home",
+    "Contact": "Contact",
+    "Project": "Project",
+    "Contact text": "If you need help with a website or application, feel free to contact me.",
+    "CV": "CV Download",
+    "Phone": "Phone",
+    "live": "Live",
+    "code": "Code",
+    "Home text": "As a Frontend Developer in the JavaScript ecosystem, I develop scalable and high-performance mobile and web applications using technologies like React, Next.js, React Native, Nest.js, Docker, and Postgresql. With over 10,000 hours of coding experience, I have contributed to over 50 projects on GitHub. I have a project published on the App Store and Play Store developed with React Native.",
+    "Chat text": "You can get information with the question Who is Emir Tetik?. However, since OpenRouter has not yet provided the ability to train AI with a RAG model, answers to such questions will be provided using a fake RAG method.",
+    "Message placeholder": "Enter your message...",
+    "Project text": "Explore a compilation of my best efforts in web and mobile application development. Over the past 2.5 years, I have evolved by adapting to the continuous changes in the development field within the dynamic digital environment. I remain committed to continuous learning in order to stay at the forefront of innovations and continue acquiring new skills."
+  }

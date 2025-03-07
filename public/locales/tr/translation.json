@@ -1,0 +1,14 @@
+{
+  "Home": "Ana Sayfa",
+  "Contact": "Bağlantı",
+  "Project": "Projeler",
+  "Contact text": "Bir web sitesi veya uygulama ile ilgili yardıma ihtiyacınız varsa, benimle iletişime geçmekten çekinmeyin.",
+  "CV": "CV İndir",
+  "Phone": "Telefon",
+  "live": "Canlı",
+  "code": "Kod",
+  "Home text": "JavaScript ekosisteminde Frontend Developer olarak, React, Next.js, React Native, Nest.js, Docker ve Postgresql teknolojilerini kullanarak ölçeklenebilir ve yüksek performanslı mobil ve web uygulamaları geliştiriyorum. 10.000+ saatlik kodlama deneyimimle, GitHub üzerinde 50 farklı  projeye katkıda bulundum. React Native ile App Store ve Play Store’da yayınladığım bir projem mevcut.",
+  "Chat text": "Emir Tetik kimdir? sorusu ile bilgi alabilirsiniz. Ancak, OpenRouter henüz yapay zekayı eğitebileceğiniz RAG modelini sunmadığı için bu tür sorulara fake RAG yöntemiyle cevap verilecektir.",
+  "Message placeholder": "Mesajınızı giriniz...",
+  "Project text": " Web ve mobil uygulama geliştirme alanındaki en iyi çabalarımın bir derlemesini keşfedin. Dinamik dijital ortamda, son 2.5 yıl içinde geliştirme alanlarındaki sürekli değişimlere uyum sağlayarak evrildim. Yeniliklerin ön saflarında kalabilmek için sürekli öğrenmeye olan bağlılığımı sürdürüyorum ve yeni beceriler kazanmaya devam ediyorum."
+}
