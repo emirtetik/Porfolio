@@ -51,7 +51,7 @@ const Project = () => {
               ))}
               <li>
                 <Link href={"/contact"}>
-                  <div className="font-prata lg:text-[117px] uppercase lg:leading-[1em] md:text-[70px] md:leading-[70px] sm:text-3xl sm:leading-[42px] max-sm:text-2xl max-sm:leading-[22px] transition-all duration-500 ease-out transform hover:translate-x-4 hover:-skew-x-6">
+                  <div className="font-prata  uppercase  transition-all duration-500 ease-out transform hover:translate-x-4 hover:-skew-x-6 xl:text-[10rem] xl:leading-[10rem] lg:text-[8rem] lg:leading-[8rem] md:text-[4.3rem] md:leading-[4.3rem] sm:text-[3.7rem] sm:leading-[3.7rem] max-sm:text-[2rem] max-sm:leading-[2rem]">
                     {t("Contact")}
                   </div>
                 </Link>

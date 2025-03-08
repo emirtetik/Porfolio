@@ -37,8 +37,8 @@ const Home = () => {
       {NavData.map((item) => (
         <div key={item.id} className="mb-2 md:mb-4">
           <Link href={item.url}>
-            <div className="font-prata lg:text-[158px] lg:leading-[159px] text-center uppercase transition-all duration-500 ease-out transform hover:translate-x-5 hover:-skew-x-6 
-    md:text-[70px] md:leading-[70px] sm:text-6xl sm:leading-[52px] max-sm:text-3xl max-sm:leading-[32px]">
+            <div className="font-prata text-center uppercase transition-all duration-500 ease-out transform hover:translate-x-5 hover:-skew-x-6 
+   xl:text-[10rem] xl:leading-[10rem] lg:text-[8rem] lg:leading-[8rem] md:text-[4.3rem] md:leading-[4.3rem] sm:text-[3.7rem] sm:leading-[3.7rem] max-sm:text-[2rem] max-sm:leading-[2rem]">
               {t(item.name)}
             </div>
           </Link>
