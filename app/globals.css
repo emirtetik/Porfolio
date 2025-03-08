@@ -1,9 +1,9 @@
 @import "tailwindcss";
 :root {
-  --background: #a3bbfb;
+  --background: #386641;
   --text-black: #000000;
   --text-white: #f3f4f6;
-  --text-gray: #1f2937;
+  --text-gray: #2f3e46;
   --font-montserrat: 'Montserrat', sans-serif;
   --font-prata: 'Prata', serif;
 }

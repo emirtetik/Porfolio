@@ -22,7 +22,7 @@ const Chatbot = () => {
   };
 
   return (
-    <div className="flex flex-col border border-5 border-gray-800 rounded-lg h-[450px] w-full max-w-lg mx-auto md:max-w-xl">
+    <div className="flex bg-[var(--text-gray)] flex-col border border-5 border-gray-800 rounded-lg h-[450px] w-full max-w-lg mx-auto md:max-w-xl">
     <div className="bg-gray-800 p-2 text-start">
         <h1 className="text-white text-xl font-bold">ChatBot</h1>
         <p className="text-white text-xs">{t("Chat text")}</p>
@@ -35,9 +35,9 @@ const Chatbot = () => {
               msg.role === "user" ? "justify-end" : "justify-start"
             }`}
           >
-            {msg.role !== "user" && <RiRobot3Fill className="text-gray-700 mr-2" size={20} />}
+            {msg.role !== "user" && <RiRobot3Fill className="text-gray-200 mr-2" size={20} />}
             <span className="text-black">{msg.content}</span>
-            {msg.role === "user" && <FaUser className="text-gray-700 ml-2" size={20} />}
+            {msg.role === "user" && <FaUser className="text-gray-200 ml-2" size={20} />}
           </div>
         ))}
       </div>

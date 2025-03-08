@@ -22,13 +22,13 @@ const Home = () => {
         <div className="w-40 h-[1px] bg-black my-3" />
         <div className="flex gap-6">
           <Link href="https://github.com/emirtetik" target="_blank">
-            <FaGithub className="text-gray-600 text-2xl md:text-3xl hover:text-black transition-colors" />
+            <FaGithub className="text-[var(--text-gray)] text-2xl md:text-3xl hover:text-black transition-colors" />
           </Link>
           <Link href="https://stackoverflow.com/users/20142369/frontmir" target="_blank">
-            <FaStackOverflow className="text-gray-600 text-2xl md:text-3xl hover:text-black transition-colors" />
+            <FaStackOverflow className="text-[var(--text-gray)] text-2xl md:text-3xl hover:text-black transition-colors" />
           </Link>
           <Link href="https://www.linkedin.com/in/emir-tetik/" target="_blank">
-            <FaLinkedin className="text-gray-600 text-2xl md:text-3xl hover:text-black transition-colors" />
+            <FaLinkedin className="text-[var(--text-gray)] text-2xl md:text-3xl hover:text-black transition-colors" />
           </Link>
         </div>
       </div>
