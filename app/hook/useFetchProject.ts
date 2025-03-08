@@ -11,11 +11,7 @@ const useFetchPosts = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await axios.get("/api/projects", {
-          headers: {
-            "Cache-Control": "no-store",
-          },
-        });
+        const response = await axios.get("/api/projects");
         const filteredPosts = response.data.filter((post: PostProps) => {
           return post.slug.includes(`.${language}`);
         });
