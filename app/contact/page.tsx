@@ -1,9 +1,10 @@
 "use client";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-export default function Contact() {
+const Contact = () => {
   const { t } = useTranslation();
 
   return (
@@ -43,3 +44,4 @@ export default function Contact() {
     </div>
   );
 }
+export default dynamic(() => Promise.resolve(Contact), { ssr: false });

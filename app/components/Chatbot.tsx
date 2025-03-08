@@ -8,8 +8,9 @@ import { RiRobot3Fill } from "react-icons/ri";
 import { useChatbot } from "../hook/useDeepseekChat";
 import { useTranslation } from "react-i18next";
 import { Input } from "../_coreComponent/Input";
+import dynamic from "next/dynamic";
 
-export default function Chatbot() {
+const Chatbot = () => {
   const [input, setInput] = useState("");
   const { messages, loading, handleSubmit } = useChatbot();
   const { t } = useTranslation();
@@ -59,3 +60,4 @@ export default function Chatbot() {
     </div>
   );
 }
+export default dynamic(() => Promise.resolve(Chatbot), { ssr: false });

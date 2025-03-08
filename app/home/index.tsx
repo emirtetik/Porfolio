@@ -6,9 +6,10 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaStackOverflow } from "react-icons/fa6";
 import Chatbot from "../components/Chatbot";
 import { useTranslation } from "react-i18next";
-export default function Home() {
-    const { t } = useTranslation();
-  
+import dynamic from "next/dynamic";
+const Home = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="pl-10 sm:pl-10 md:pl-12 lg:pl-16 xl:pl-28 flex flex-col md:flex-row h-screen p-4 sm:overflow-auto lg:overflow-hidden">
 
@@ -47,3 +48,4 @@ export default function Home() {
   </div>
   );
 }
+export default dynamic(() => Promise.resolve(Home), { ssr: false });

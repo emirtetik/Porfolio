@@ -15,6 +15,8 @@ i18n
       order: ["localStorage", "cookie", "navigator"],
       caches: ["localStorage", "cookie"],
     },
+    interpolation: { escapeValue: false },
+    react: { useSuspense: false },
   });
 
 export default i18n;

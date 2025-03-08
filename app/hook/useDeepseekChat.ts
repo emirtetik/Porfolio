@@ -18,18 +18,20 @@ const fakeRagDataEn: { [key: string]: string } = {
     "achieved success with his projects published on the App Store and Play Store using React Native. Additionally, he developed one of his applications up to the beta stage and marketed it to a software company in exchange for equity. " +
     "Emir is highly skilled in Frontend and Backend development, writing clean, sustainable code, and API integrations. He continues to create innovative projects, driven by his interest in new technologies. " +
     "Over the past year, he has worked exclusively on React Native projects and aims to promote a project called Tetrig to cafes. He is also working on AI systems like Deepseek, ChatGPT, and Gemini while preparing his new portfolio site with Next.js. " +
-    "His career includes various projects, and he continues to contribute to the technology world by constantly improving himself."
+    "His career includes various projects, and he continues to contribute to the technology world by constantly improving himself.",
 };
 export const useChatbot = () => {
-  const [messages, setMessages] = useState<{ role: string; content: string }[]>([]);
+  const [messages, setMessages] = useState<{ role: string; content: string }[]>(
+    []
+  );
   const [loading, setLoading] = useState(false);
   const { t } = useTranslation();
-  
+
 
   const handleSubmit = async (input: string) => {
     if (!input.trim()) return;
     const Deepseek = process.env.NEXT_PUBLIC_DEEPSEEK_API_KEY;
-  
+
     if (!Deepseek) {
       console.error("API Key is missing or incorrect");
       setLoading(false);
@@ -40,19 +42,22 @@ export const useChatbot = () => {
     setMessages((prev) => [...prev, userMessage]);
 
     const isEmirQuestion =
-    input.toLowerCase().includes("emir") ||
-    input.toLowerCase().includes("tetik") ||
-    input.toLowerCase().includes("emir tetik");
+      input.toLowerCase().includes("emir") ||
+      input.toLowerCase().includes("tetik") ||
+      input.toLowerCase().includes("emir tetik");
 
-  if (isEmirQuestion) {
-    const botMessage = {
-      role: "assistant",
-      content: t("language") === "en" ? fakeRagDataEn["Who is Emir Tetik?"] : fakeRagData["Emir Tetik kimdir?"],
-    };
-    setMessages((prev) => [...prev, botMessage]);
-    setLoading(false);
-    return;
-  }
+    if (isEmirQuestion) {
+      const botMessage = {
+        role: "assistant",
+        content:
+          t("language") === "en"
+            ? fakeRagDataEn["Who is Emir Tetik?"]
+            : fakeRagData["Emir Tetik kimdir?"],
+      };
+      setMessages((prev) => [...prev, botMessage]);
+      setLoading(false);
+      return;
+    }
 
     try {
       const response = await axios.post(

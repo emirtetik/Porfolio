@@ -4,11 +4,12 @@ import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import useFetchProject from "../hook/useFetchProject";
 import { LuLoaderPinwheel } from "react-icons/lu";
+import dynamic from "next/dynamic";
 
-export default function Project() {
+const Project = () => {
   const { t } = useTranslation();
-  const { posts, loading, error } = useFetchProject();
-
+   const { posts, loading, error } = useFetchProject();
+  
   if (loading) {
     return (
       <div className="flex items-center justify-center h-screen bg-[var(--text-gray)]">
@@ -62,3 +63,5 @@ export default function Project() {
     </div>
   );
 }
+
+export default dynamic(() => Promise.resolve(Project), { ssr: false });

@@ -3,9 +3,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslation } from "react-i18next";
 import "../i18n/i18n";
-export default function Navigation() {
+import dynamic from "next/dynamic";
+const Navigation = () => {
   const pathname = usePathname();
   const { t, i18n } = useTranslation();
+
   const clickHandle = async (lang: string) => {
     await i18n.changeLanguage(lang);
   };
@@ -51,7 +53,9 @@ export default function Navigation() {
               </div>
             ) : (
               <div className="flex">
-                <span className="text-[var(--text-white)] whitespace-nowrap">{t("Home")}</span>
+                <span className="text-[var(--text-white)] whitespace-nowrap">
+                  {t("Home")}
+                </span>
               </div>
             )}
           </div>
@@ -77,4 +81,5 @@ export default function Navigation() {
       </div>
     </nav>
   );
-}
+};
+export default dynamic(() => Promise.resolve(Navigation), { ssr: false });
