@@ -29,8 +29,6 @@ export const useChatbot = () => {
   const handleSubmit = async (input: string) => {
     if (!input.trim()) return;
     const Deepseek = process.env.NEXT_PUBLIC_DEEPSEEK_API_KEY;
-    console.log(process.env);
-    console.log('DEEPSEEK_API_KEY:', Deepseek);
   
     if (!Deepseek) {
       console.error("API Key is missing or incorrect");
@@ -67,6 +65,7 @@ export const useChatbot = () => {
           headers: {
             Authorization: `Bearer ${Deepseek}`,
             "Content-Type": "application/json",
+            "Cache-Control": "no-store",
           },
         }
       );

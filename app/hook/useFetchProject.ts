@@ -11,15 +11,19 @@ const useFetchPosts = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await axios.get("/api/projects");
+        const response = await axios.get("/api/projects", {
+          headers: {
+            "Cache-Control": "no-store",
+          },
+        });
         const filteredPosts = response.data.filter((post: PostProps) => {
           return post.slug.includes(`.${language}`);
         });
 
-        console.log('filteredPosts', filteredPosts);
+        console.log("filteredPosts", filteredPosts);
         setPosts(filteredPosts);
       } catch (err: unknown) {
-        console.error(err)
+        console.error(err);
         setError("Error fetching posts");
       } finally {
         setLoading(false);

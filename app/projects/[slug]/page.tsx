@@ -4,24 +4,24 @@ import Image from "next/image";
 import Link from "next/link";
 import { getAllPosts } from "../../lib/posts";
 import { PostProps } from "../../types";
-interface PostPageProps {
-  params: { slug: string };
-}
+type tParams = Promise<{ slug: string[] }>;
 export async function generateStaticParams() {
   const posts: PostProps[] = getAllPosts();
 
   return posts.map((post) => ({
-    slug: post.slug,
+    params: { slug: [post.slug] },
   }));
 }
 
-export default async function Projects({ params }: PostPageProps) {
-  const { slug } = await params;
+export default async function Projects({ params }: { params: tParams }) {
+  const resolvedParams = await params; 
+  const { slug } = resolvedParams;
   if (!slug) {
     notFound();
   }
-  const post = getAllPosts().find((p) => p.slug === slug);
-
+  
+const slugValue = Array.isArray(slug) ? slug[0] : slug;
+const post = getAllPosts().find((p) => p.slug === slugValue);
   if (!post) {
     notFound();
   }
@@ -78,6 +78,7 @@ export default async function Projects({ params }: PostPageProps) {
                     width={400}
                     height={300}
                     className="rounded-lg shadow-md w-full h-auto"
+                    style={{ maxWidth: '350px', maxHeight: '600px' }} 
                   />
                 </div>
               ))}
