@@ -35,7 +35,7 @@ const Project = () => {
           <div className="p-6 sm:p-8 md:p-10">
             <ul className="gap-y-6 sm:gap-y-8 md:gap-y-10 flex flex-col">
               {posts.map((post) => (
-                <li key={post.slug} className="">
+                <li key={post.slug}>
                   <Link href={`/projects/${post.slug}`}>
                     <h1 className="font-prata lg:text-[117px] uppercase lg:leading-[1em] md:text-[70px] md:leading-[70px] sm:text-3xl sm:leading-[42px] max-sm:text-2xl max-sm:leading-[22px] transition-all duration-500 ease-out transform hover:translate-x-4 hover:-skew-x-6">
                       {post.title}
