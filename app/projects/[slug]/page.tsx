@@ -14,14 +14,14 @@ export async function generateStaticParams() {
 }
 
 export default async function Projects({ params }: { params: tParams }) {
-  const resolvedParams = await params; 
+  const resolvedParams = await params;
   const { slug } = resolvedParams;
   if (!slug) {
     notFound();
   }
-  
-const slugValue = Array.isArray(slug) ? slug[0] : slug;
-const post = getAllPosts().find((p) => p.slug === slugValue);
+
+  const slugValue = Array.isArray(slug) ? slug[0] : slug;
+  const post = getAllPosts().find((p) => p.slug === slugValue);
   if (!post) {
     notFound();
   }
@@ -35,8 +35,8 @@ const post = getAllPosts().find((p) => p.slug === slugValue);
       <article className="pl-16 sm:pl-12 md:pl-12 lg:pl-16 xl:pl-28 bg-[var(--text-gray)] min-h-screen text-[var(--text-white)] md:mt-0 md:gap-20 md:px-24">
         <div className="relative flex uppercase w-full md:justify-center  text-center bg-[var(--background)] py-10">
           <h1
-            className="font-prata text-black lg:text-[100px] lg:leading-[159px] text-center uppercase transition-all duration-500 ease-out transform hover:translate-x-5 hover:-skew-x-6 
-    md:text-[70px] md:leading-[70px] sm:text-6xl sm:leading-[52px] max-sm:text-3xl max-sm:leading-[32px] self-end "
+            className="font-prata text-black text-center uppercase transition-all duration-500 ease-out transform hover:translate-x-5 hover:-skew-x-6 
+    self-end  xl:text-[7rem] xl:leading-[7rem] lg:text-[6rem] lg:leading-[6rem] md:text-[5.3rem] md:leading-[5.3rem] sm:text-[4rem] sm:leading-[4rem] max-sm:text-[2.5rem] max-sm:leading-[3rem]"
           >
             {post.title}
           </h1>
@@ -78,7 +78,7 @@ const post = getAllPosts().find((p) => p.slug === slugValue);
                     width={400}
                     height={300}
                     className="rounded-lg shadow-md w-full h-auto"
-                    style={{ maxWidth: '350px', maxHeight: '600px' }} 
+                    style={{ maxWidth: "350px", maxHeight: "600px" }}
                   />
                 </div>
               ))}

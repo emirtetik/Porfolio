@@ -8,8 +8,8 @@ import dynamic from "next/dynamic";
 
 const Project = () => {
   const { t } = useTranslation();
-   const { posts, loading, error } = useFetchProject();
-  
+  const { posts, loading, error } = useFetchProject();
+
   if (loading) {
     return (
       <div className="flex items-center justify-center h-screen bg-[var(--text-gray)]">
@@ -37,7 +37,7 @@ const Project = () => {
               {posts.map((post) => (
                 <li key={post.slug}>
                   <Link href={`/projects/${post.slug}`}>
-                    <h1 className="font-prata lg:text-[117px] uppercase lg:leading-[1em] md:text-[70px] md:leading-[70px] sm:text-3xl sm:leading-[42px] max-sm:text-2xl max-sm:leading-[22px] transition-all duration-500 ease-out transform hover:translate-x-4 hover:-skew-x-6">
+                    <h1 className="font-prata transition-all duration-500 ease-out transform hover:translate-x-4 hover:-skew-x-6 xl:text-[7rem] xl:leading-[7rem] lg:text-[6rem] lg:leading-[6rem] md:text-[5.3rem] md:leading-[5.3rem] sm:text-[4rem] sm:leading-[4rem] max-sm:text-[2.5rem] max-sm:leading-[3rem]">
                       {post.title}
                     </h1>
                   </Link>
@@ -51,9 +51,9 @@ const Project = () => {
               ))}
               <li>
                 <Link href={"/contact"}>
-                  <div className="font-prata  uppercase  transition-all duration-500 ease-out transform hover:translate-x-4 hover:-skew-x-6 xl:text-[10rem] xl:leading-[10rem] lg:text-[8rem] lg:leading-[8rem] md:text-[4.3rem] md:leading-[4.3rem] sm:text-[3.7rem] sm:leading-[3.7rem] max-sm:text-[2rem] max-sm:leading-[2rem]">
+                  <h1 className="font-prata  uppercase  transition-all duration-500 ease-out transform hover:translate-x-4 hover:-skew-x-6 xl:text-[7rem] xl:leading-[7rem] lg:text-[6rem] lg:leading-[6rem] md:text-[5.3rem] md:leading-[5.3rem] sm:text-[4rem] sm:leading-[4rem] max-sm:text-[2.5rem] max-sm:leading-[3rem]">
                     {t("Contact")}
-                  </div>
+                  </h1>
                 </Link>
               </li>
             </ul>
@@ -62,6 +62,6 @@ const Project = () => {
       </div>
     </div>
   );
-}
+};
 
 export default dynamic(() => Promise.resolve(Project), { ssr: false });

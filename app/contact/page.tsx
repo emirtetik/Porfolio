@@ -6,17 +6,19 @@ import { useTranslation } from "react-i18next";
 
 const Contact = () => {
   const { t, i18n } = useTranslation();
-  const cvLink = i18n.language === "en"
-  ? "/cv/emirtetik.en.cv.pdf"
-  : "/cv/emirtetik.tr.cv.pdf";
+  const cvLink =
+    i18n.language === "en"
+      ? "/cv/emirtetik.en.cv.pdf"
+      : "/cv/emirtetik.tr.cv.pdf";
   return (
     <div className="pl-12 sm:pl-20 md:pl-20 lg:pl-16 xl:pl-28 flex flex-col justify-center min-h-screen text-[var(--text-white)] bg-[var(--text-gray)] overflow-hidden">
-      <h1
-        className="font-prata uppercase  transition-all duration-500 ease-out transform hover:translate-x-4 hover:-skew-x-6 xl:text-[7rem] xl:leading-[7rem] lg:text-[6rem] lg:leading-[6rem] md:text-[5.3rem] md:leading-[5.3rem] sm:text-[4rem] sm:leading-[4rem] max-sm:text-[2.5rem] max-sm:leading-[3rem]">
+      <h1 className="font-prata uppercase  transition-all duration-500 ease-out transform hover:translate-x-4 hover:-skew-x-6 xl:text-[7rem] xl:leading-[7rem] lg:text-[6rem] lg:leading-[6rem] md:text-[5.3rem] md:leading-[5.3rem] sm:text-[4rem] sm:leading-[4rem] max-sm:text-[2.5rem] max-sm:leading-[3rem]">
         {t("Contact")}
       </h1>
       <div>
-      <p className="mb-4 text-sm sm:text-base md:text-lg">{t("Contact text")}</p>
+        <p className="mb-4 text-sm sm:text-base md:text-lg">
+          {t("Contact text")}
+        </p>
         <ul className="text-sm sm:text-base md:text-lg">
           <li>
             <Link
@@ -44,5 +46,5 @@ const Contact = () => {
       </div>
     </div>
   );
-}
+};
 export default dynamic(() => Promise.resolve(Contact), { ssr: false });
