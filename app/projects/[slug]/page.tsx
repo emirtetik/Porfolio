@@ -36,11 +36,11 @@ export default async function Projects({ params }: { params: tParams }) {
         <div className="relative flex uppercase w-full md:justify-center  text-center bg-[var(--background)] py-10">
           <h1
             className="font-prata text-black text-center uppercase transition-all duration-500 ease-out transform hover:translate-x-5 hover:-skew-x-6 
-    self-end  xl:text-[7rem] xl:leading-[7rem] lg:text-[6rem] lg:leading-[6rem] md:text-[5.3rem] md:leading-[5.3rem] sm:text-[4rem] sm:leading-[4rem] max-sm:text-[2.5rem] max-sm:leading-[3rem]"
+    self-end  xl:text-[7rem] xl:leading-[7rem] lg:text-[6rem] lg:leading-[6rem] md:text-[5.3rem] md:leading-[5.3rem] sm:text-[4rem] sm:leading-[4rem] max-sm:text-[2rem] max-sm:leading-[3rem]"
           >
             {post.title}
           </h1>
-          <div className="absolute flex top-10 right-10 items-center justify-center m-6 gap-x-5 md:relative md:top-0 md:left-0">
+          <div className="absolute flex max-sm:top-18 top-10 right-10 items-center justify-center m-6 gap-x-5 md:relative md:top-0 md:left-0">
             {post.live && post.live.trim() !== "" && (
               <Link
                 target="_blank"

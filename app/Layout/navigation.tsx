@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import { useTranslation } from "react-i18next";
 import "../i18n/i18n";
 import dynamic from "next/dynamic";
+import { Button } from "../_coreComponent/Button";
 const Navigation = () => {
   const pathname = usePathname();
   const { t, i18n } = useTranslation();
@@ -33,30 +34,24 @@ const Navigation = () => {
               }`}
           >
             {pathname === "/" ? (
-              <div className="flex gap-x-6">
-                <span
+              <div className="flex gap-x-4">
+                <Button
                   onClick={() => clickHandle("en")}
                   className="cursor-pointer"
                 >
-                  English
-                </span>
-                <span
+                  {t("English")}
+                </Button>
+                <Button
                   onClick={() => clickHandle("tr")}
                   className="cursor-pointer"
                 >
-                  Turkish
-                </span>
+                  {t("Turkish")}
+                </Button>
               </div>
             ) : pathname.startsWith("/projects/") ? (
-              <div className="flex">
-                <span className="text-[var(--text-white)]">{t("Project")}</span>
-              </div>
+              <h1 className="text-[var(--text-white)]">{t("Project")}</h1>
             ) : (
-              <div className="flex">
-                <span className="text-[var(--text-white)] whitespace-nowrap">
-                  {t("Home")}
-                </span>
-              </div>
+              <h1 className="text-[var(--text-white)] whitespace-nowrap">{t("Home")}</h1>
             )}
           </div>
         </Link>

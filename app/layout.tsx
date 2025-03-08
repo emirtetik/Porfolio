@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="tr" suppressHydrationWarning>
       <body
        className={`${fontMontserrat.variable} ${fontPrata.variable}  antialiased`} 
       >
