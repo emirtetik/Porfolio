@@ -37,14 +37,14 @@ const Project = () => {
               {posts.map((post) => (
                 <li key={post.slug}>
                   <Link href={`/projects/${post.slug}`}>
-                    <h1 className="font-prata transition-all duration-500 ease-out transform hover:translate-x-4 hover:-skew-x-6 xl:text-[7rem] xl:leading-[7rem] lg:text-[6rem] lg:leading-[6rem] md:text-[5.3rem] md:leading-[5.3rem] sm:text-[4rem] sm:leading-[4rem] max-sm:text-[2.5rem] max-sm:leading-[3rem]">
+                    <h1 className="font-prata  transition-all duration-500 ease-out transform hover:translate-x-4 hover:-skew-x-6 xl:text-[7rem] xl:leading-[7rem] lg:text-[6rem] lg:leading-[6rem] md:text-[5.3rem] md:leading-[5.3rem] sm:text-[4rem] sm:leading-[4rem] max-sm:text-[2.5rem] max-sm:leading-[3rem]">
                       {post.title}
                     </h1>
                   </Link>
-                  <p className="indent-4 text-sm sm:text-base md:text-lg">
+                  <p className="indent-4 text-[var(--text-white)] text-sm sm:text-base md:text-lg">
                     - {post.description}
                   </p>
-                  <p className="indent-4 text-sm sm:text-base md:text-lg">
+                  <p className="indent-4 text-[var(--text-white)] text-sm sm:text-base md:text-lg">
                     - {post.date}
                   </p>
                 </li>
