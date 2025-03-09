@@ -35,8 +35,8 @@ export default async function Projects({ params }: { params: tParams }) {
       <article className="pl-16 sm:pl-12 md:pl-12 lg:pl-16 xl:pl-28 bg-[var(--text-gray)] min-h-screen text-[var(--text-white)] md:mt-0 md:gap-20 md:px-24">
         <div className="relative flex uppercase w-full md:justify-center  text-center bg-[var(--background)] py-10">
           <h1
-            className="font-prata text-black text-center uppercase transition-all duration-500 ease-out transform hover:translate-x-5 hover:-skew-x-6 
-    self-end  xl:text-[7rem] xl:leading-[7rem] lg:text-[6rem] lg:leading-[6rem] md:text-[5.3rem] md:leading-[5.3rem] sm:text-[4rem] sm:leading-[4rem] max-sm:text-[2rem] max-sm:leading-[3rem]"
+            className="font-prata text-center uppercase transition-all duration-500 ease-out transform hover:translate-x-5 hover:-skew-x-6 
+    self-end  xl:text-[7rem] xl:leading-[7rem] lg:text-[6rem] lg:leading-[6rem] md:text-[5.3rem] md:leading-[5.3rem] sm:text-[4rem] sm:leading-[4rem] max-sm:text-[2rem] max-sm:leading-[3rem] "
           >
             {post.title}
           </h1>
@@ -46,7 +46,7 @@ export default async function Projects({ params }: { params: tParams }) {
                 target="_blank"
                 rel="noopener noreferrer"
                 href={post.live}
-                className="hover-underline-animation font-bold text-black max-sm:text-lg font-prata"
+                className="hover-underline-animation-white font-bold  max-sm:text-lg font-prata"
               >
                 {post.liveText}
               </Link>
@@ -56,7 +56,7 @@ export default async function Projects({ params }: { params: tParams }) {
                 target="_blank"
                 rel="noopener noreferrer"
                 href={post.code}
-                className="hover-underline-animation font-bold text-black font-prata"
+                className="hover-underline-animation-white font-bold  font-prata"
               >
                 {post.codeText}
               </Link>

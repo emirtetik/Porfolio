@@ -18,7 +18,7 @@ const Navigation = () => {
       <div className="flex flex-col items-center">
         <Link
           href={pathname.startsWith("/projects/") ? "/project" : "/"}
-          className="block"
+          className="block font-bold"
         >
           <div
             className={`font-montserrat transform rotate-270 
@@ -30,33 +30,33 @@ const Navigation = () => {
               ${
                 pathname !== "/"
                   ? "hover-underline-animation-white"
-                  : "hover-underline-animation"
+                  : "hover-underline-animation-white"
               }`}
           >
             {pathname === "/" ? (
               <div className="flex gap-x-4">
                 <Button
                   onClick={() => clickHandle("en")}
-                  className="cursor-pointer"
+                  className="cursor-pointer font-bold"
                 >
                   {t("English")}
                 </Button>
                 <Button
                   onClick={() => clickHandle("tr")}
-                  className="cursor-pointer"
+                  className="cursor-pointer font-bold"
                 >
                   {t("Turkish")}
                 </Button>
               </div>
             ) : pathname.startsWith("/projects/") ? (
-              <h1 className="text-[var(--text-white)]">{t("Project")}</h1>
+              <h1 className="text-[var(--text-white)] font-bold">{t("Project")}</h1>
             ) : (
-              <h1 className="text-[var(--text-white)] whitespace-nowrap">{t("Home")}</h1>
+              <h1 className="text-[var(--text-white)] whitespace-nowrap font-bold">{t("Home")}</h1>
             )}
           </div>
         </Link>
         <div
-          className={`w-[2px] h-26 mt-20 ${
+          className={`w-[2px]  h-26 mt-20 ${
             pathname === "/"
               ? "bg-[var(--text-black)]"
               : "bg-[var(--text-white)]"
@@ -65,7 +65,7 @@ const Navigation = () => {
       </div>
       <div className="transform rotate-270 text-center p-4">
         <p
-          className={`text-sm ${
+          className={`text-sm font-bold ${
             pathname === "/"
               ? "text-[var(--text-black)]"
               : "text-[var(--text-white)]"
