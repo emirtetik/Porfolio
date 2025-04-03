@@ -27,7 +27,7 @@ const Contact = () => {
               className="hover-underline-animation-white"
               href="mailto:emirtetik.41@hotmail.com"
             >
-              Email: emirtetik.41@hotmail.com
+              Email: emir.tsx@gmail.com
             </Link>
           </li>
           <li className="hover-underline-animation-white">
