@@ -8,8 +8,8 @@ const Contact = () => {
   const { t, i18n } = useTranslation();
   const cvLink =
     i18n.language === "en"
-      ? "/cv/EmirTetik.en.pdf"
-      : "/cv/EmirTetik.tr.pdf";
+      ? "/cv/EmirFD.en.pdf"
+      : "/cv/EmirFD.tr.pdf";
       
   return (
     <div className="pl-12 sm:pl-20 md:pl-20 lg:pl-16 xl:pl-28 flex flex-col justify-center min-h-screen text-[var(--text-white)] bg-[var(--text-gray)] overflow-hidden">
